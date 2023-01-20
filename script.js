@@ -1,6 +1,8 @@
-var resume = {
-"Name":"Gokulnadhan.K"
-"Address":"61/197, EPB Nagar,Soolai, Veerappanchatram (PO), Erode-638004"
-"objective":"Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company"
-"experience":"one year experience in wiring harness design at Yazaki India Pvt Limited, Maraimalainagar, Chengalpattu"
+function getdata(){
+    fetch('./script.json').then((response) => response.json()).then((data) => renderjson(data));
+}
+getdata()
+function renderjson(data){
+    const element=document.getElementById('jsonviewer')
+    element.innerText=JSON.stringify(data)
 }
